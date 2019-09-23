@@ -10,12 +10,26 @@ composer install
 npm install
 ```
 
-make a .env file and set your db
+make a .env file and set your db 
+```
+mv .env.example .env
+```
 
 then
 ```
 php artisan key:generate
 php artisan jwt:secret
+```
+
+reset cache
+```
+php artisan config:clear
+php artisan config:cache
+```
+
+create tables in database
+```
+php artisan migrate
 ```
 
 # Usage
